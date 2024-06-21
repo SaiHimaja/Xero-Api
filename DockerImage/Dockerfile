@@ -21,6 +21,3 @@ ENV AUTHORIZATION_CODE=your_authorization_code
 CMD ["mvn", "exec:java", "-Dexec.mainClass= com.src.testApi.App"]
 
 
-#Build the docker file for docker image: docker build -t my-xero-app .
-#run the docker file: docker run -it --rm my-xero-app
-

@@ -1,0 +1,13 @@
+stages:
+  - build
+
+build:
+  stage: build
+  image: docker:19.03.12
+  services:
+    - docker:19.03.12-dind
+  script:
+    - docker build -t my-xero-app .
+    - docker run -it --rm my-xero-app
+  only:
+    - master  # Adjust as per your branch deployment strategy
